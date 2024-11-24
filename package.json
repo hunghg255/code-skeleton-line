@@ -1,0 +1,69 @@
+{
+  "name": "code-skeleton-line",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "start": "npm run build && vite preview",
+    "format": "prettier --write \"./src/**/*.{ts,tsx,json}\"",
+    "analyze": "npm run lint && tsc && vite build --mode=analyze && source-map-explorer 'dist/assets/*.js'",
+    "verify-commit": "verify-commit-msg",
+    "postinstall": "git-scm-hooks",
+    "release": "bumpp -r",
+    "lint": "eslint src",
+    "check": "prettier --check src",
+    "fix": "eslint --fix src && prettier --write src"
+  },
+  "dependencies": {
+    "@progress/kendo-drawing": "^1.21.2",
+    "@radix-ui/react-switch": "^1.1.1",
+    "@radix-ui/react-toggle": "^1.1.0",
+    "ace-builds": "^1.36.5",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "html2canvas": "^1.4.1",
+    "lucide-react": "^0.460.0",
+    "react": "^18.2.0",
+    "react-ace": "^13.0.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@hunghg255/eslint-config": "^0.0.1",
+    "@total-typescript/ts-reset": "^0.4.2",
+    "@types/node": "^20.6.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
+    "autoprefixer": "^10.4.20",
+    "bumpp": "^9.2.0",
+    "eslint": "^9.13.0",
+    "git-scm-hooks": "^0.0.6",
+    "postcss": "^8.4.49",
+    "prettier": "^2.8.8",
+    "sass": "^1.67.0",
+    "source-map-explorer": "^2.5.3",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^4.9.5",
+    "verify-commit-msg": "^0.0.11",
+    "vite": "^4.4.9",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-environment": "^1.1.3",
+    "vite-plugin-lightningcss": "^0.0.5"
+  },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
+  "git-hooks": {
+    "pre-commit": "npm run lint",
+    "commit-msg": "npm run verify-commit"
+  },
+  "packageManager": "pnpm@8.15.9+sha512.499434c9d8fdd1a2794ebf4552b3b25c0a633abcee5bb15e7b5de90f32f47b513aca98cd5cfd001c31f0db454bc3804edccd578501e4ca293a6816166bbd9f81"
+}
